@@ -1,0 +1,3 @@
+ClusterIp是用于K8s集群内部，Pod之间的通讯时，使用的一种集群内的Service网络通讯机制。
+
+ClusterIp为Service对集群内提供一个虚拟IP。
