@@ -1,0 +1,6 @@
+FROM nginx
+
+VOLUME /root/nginx/nginx_3.conf  /etc/nginx/nginx.conf
+COPY  /root/nginx/test_2.html   /etc/nginx/index.html
+
+#COPY nginx-image/nginx.conf  /etc/local/conf.d/nginx.conf
