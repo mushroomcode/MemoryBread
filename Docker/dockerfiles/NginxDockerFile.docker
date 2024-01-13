@@ -1,6 +1,11 @@
+# 拉取 nginx 镜像信息
 FROM nginx
 
-VOLUME /root/nginx/nginx_3.conf  /etc/nginx/nginx.conf
-COPY  /root/nginx/test_2.html   /etc/nginx/index.html
+# 创建一个文件目录，用于存放 nginx conf配置文件，将 index.html（首页信息 和 nginx.html 配置文件添加到新建目录下）
+RUN mkdir -p  /etc/nginx/
+COPY  nginx.conf  /etc/nginx/
+COPY index.html   /etc/nginx/
+# 设置 nginx 对外暴露的接口
+EXPOSE 8999
 
 #COPY nginx-image/nginx.conf  /etc/local/conf.d/nginx.conf
