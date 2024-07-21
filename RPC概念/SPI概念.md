@@ -6,6 +6,11 @@
 它的工作原理是：当服务的提供者提供了服务接口的一种实现后，在jar包的META-INF/services目录下创建一个文件，  
 文件名是服务接口的全限定名，文件内容是实现类的全限定名，在运行时，服务加载器可以加载这些文件并实例化这些类。  
 
+SPI由3个部分组成：
+Service：服务接口/抽象类。  
+Service Provider：实现接口的逻辑，提供具体的服务。  
+Service Loader：在"运行时"发现并加载Service Provider（是 runtime，runtime，runtime）。  
+
                                  | --> 实现类 A  
 调用方 --> 调用 --> 标准服务接口 --> | --> 实现类 B  
                              
