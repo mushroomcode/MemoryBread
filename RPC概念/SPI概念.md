@@ -16,3 +16,8 @@ Service Loader：在"运行时"发现并加载Service Provider（是 runtime，r
                              
 面向的对象的设计里，我们一般推荐模块之间基于接口编程，模块之间不对实现类进行硬编码，  
 一旦代码里涉及具体的实现类，就违反了可插拔的原则，如果需要替换一种实现，就需要修改代码。
+
+应用场景：
+JDBC加载不同类型的数据库驱动，java提供统一接口java.sql.Driver给数据库供应商业，mysql、oracle等数据库厂商可以实现自身的数据库驱动接入模式。
+在使用时候，引入Service+ServiceProvider，通过使用ServiceLoader或者classLoader读取MATE-INF/services里面实现接口类的实体类。
+
