@@ -21,3 +21,5 @@ SCP是Secure Copy Protocol（安全拷贝协议）的缩写，是SSH（Secure Sh
 scp local_file remote_username@remote_ip:remote_folder
 
 """joyyue@joyyuedeMacBook-Pro ~ % scp /Users/joyyue/Downloads/docker-desktop-amd64.deb  root@47.115.204.11:/usr/local/bin/"""
+
+scp /Users/joyyue/Downloads/docker-desktop-amd64.deb  root@47.115.204.11:/usr/local/bin/
