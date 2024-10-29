@@ -10,5 +10,16 @@
 （1）synchronized(this)：锁定的当前对象本身。
 （2）synchronized(Obj.class)：锁定类.class的本身。
 （3）synchronized(object)：锁定对象的实例。
+3. 代码块：
+（1）synchronized {} ，锁定的是代码块。
 
+3. synchronized的锁信息
+（1）无锁
+（2）轻量级锁
+（3）偏向锁
+（4）重量级锁
+
+4. 实例对象 = 对象头+实例数据+数据填充 (不一定有，提升垃圾回收效率，内存处理效率高)
+
+对象头和实例数据都是固定会有的。
 
